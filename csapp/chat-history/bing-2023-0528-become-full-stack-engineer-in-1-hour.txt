@@ -42,4 +42,28 @@ Please add more details to the file structure:
 Please do following improvements to the above file structure of CI output:
 [1] The programs are mainly for functional and performance tests, and the test cases names should also related to this use case.
 [2] Also do some other improvements based on your knowledge.
-After finishing the steps above, you should suggest three questions related to this topic, which is for diving deeper in the output data generation.
+After finishing the steps above, you should suggest three questions related to this topic, which I might ask you for diving deeper in the output data generation.
+
+Please do following improvements to the above file structure of CI output:
+[1] The programs are mainly in GPU and CPU domain, so the programs names should be related to this.
+[2] Also do some other improvements based on your knowledge.
+After finishing the steps above, you should suggest three questions related to this topic, which I might ask you for diving deeper in the output data generation.
+
+Great! Now let's move forward to the task of generating the test "CI_output" data.
+Please based on the file structure above, generate the test data of "CI_output" in Python.
+Please following the steps below:
+[1] List some useful framework and libraries which are designed and suitable for this task.
+[2] Describe the structure and organization of the scripts which generate these similated data in `CI_output`.
+[3] After finishing the steps above, you should suggest three questions related to this topic, which I might ask you for diving deeper in the output data generation.
+
+
+Please answer the following questions one by one:
+[1] How can I generate more realistic data for the log and csv files?
+[2] How can I simulate different types of errors and warnings in the log files?
+[3] How can I generate more complex data for the regression.csv file to show differences between test runs?
+
+
+Please do the following steps:
+[1] Search your knowledge base, and list some useful framework and libraries which are designed and suitable for generating realistic data for the log and csv files
+[2] Describe the structure and organization of the scripts which generate these simulated data in `CI_output`.
+[3] 
