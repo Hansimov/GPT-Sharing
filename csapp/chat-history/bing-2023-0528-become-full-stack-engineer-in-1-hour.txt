@@ -1,0 +1,21 @@
+Scenario: 
+I am a experienced software engineer and I would like to share the use case of GPT in aiding programming.
+I would like to make a sharing which titled "Become a Full-Stack Engineer in 1 hour".
+
+Problem:
+[1] Suggest several good cases that GPT can help software developers based on this topic.
+[2] Provide the preliminaries of the topic, such as the definition of full-stack engineer, the skills required, etc.
+[3] Provide the detailed steps of how to become a full-stack engineer, such as the learning path, the learning resources, etc.
+
+Solutions:
+
+
+Let's focus on a more detailed case:
+[1] Users have a CI running some programs, and the program would generate some results of .log and .csv;
+[2] The .log contains the running info, warnings and errors for the program and data, while the .csv contain the structured data of each test case.
+[3] The user would like to quickly build a website with frontend and backend, so that he can get the notifications when the task is done, and the webpage should also contain a beautiful visualization of the history results, which is formatted from .csv files.
+
+Please based on the above info, provide suggestions on following points:
+[1] Generate testing files of .log and .csv for the frontend and backend to use;
+[2] Describe the software architecture and the data flow;
+[3] Recommend the framework and tools of frontend and backend, note the the learners are only familiar with Python, and has few experience on frontend development.
