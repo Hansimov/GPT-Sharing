@@ -1,0 +1,15 @@
+# latex files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.listing
+*.log
+*.gz
+*.nav
+*.out
+*.snm
+*.toc
+*.xml

@@ -1,0 +1,43 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{mindmap}
+
+\begin{document}
+\begin{tikzpicture}[
+    level 1 concept/.append style={sibling angle=72},
+    level 2 concept/.append style={sibling angle=45}
+  ]
+  \path[mindmap,concept color=red!50,text=white]
+    node[concept] (root) {Coding Lifecycle}
+    [clockwise from=0]
+    child[concept color=blue!50] {
+      node[concept] (ra) {Requirement Analysis}
+      [clockwise from=-45]
+      child {node[concept] {Gathering}}
+      child {node[concept] {Analysis}}
+    }
+    child[concept color=green!50] {
+      node[concept] (d) {Design}
+      [clockwise from=45]
+      child {node[concept] {Architecture}}
+      child {node[concept] {Interface}}
+    }
+    child[concept color=orange!50] {
+      node[concept] (i) {Implementation}
+      [clockwise from=135]
+      child {node[concept] {Coding}}
+      child {node[concept] {Debugging}}
+    }
+    child[concept color=purple!50] {
+      node[concept] (ti) {Testing and Integration}
+      [clockwise from=-135]
+      child {node[concept] {Unit Testing}}
+      child {node[concept] {Integration Testing}}
+    }
+    child[concept color=brown!50] {
+      node[concept] (m) {Maintenance}
+      [clockwise from=-45]
+      child {node[concept] {Bug Fixing}}
+      child {node[concept] {Updates}}
+    };
+\end{tikzpicture}
+\end{document}

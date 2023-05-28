@@ -1,0 +1,17 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{smartdiagram}
+\smartdiagramset{
+    descriptive items y sep=2,
+    description title width=2.25cm,
+    description title text width=2.25cm,
+    description text width=12cm
+}
+\begin{document}
+\smartdiagram[descriptive diagram]{
+  {Roles, {Act as Python expert,\\ You are an experienced Frontend programmer}},
+  {{Scenarios,\\ Contexts}, {I'm writing a Python Project,\\ You are developping a concurrent program for data processing}},
+  {{Instructions}, {You should extract all definitions of functions from this script,\\ You task is to complete this script with a timeit feature,\\ I would like to add an web UI to this}},
+  {Questions,{Could you give some suggestions on this plan,\\ Can you summarize the goal of the codes}},
+  {{Examples, Shots}, {Here is an example,\\ The output should be similar to the following formats,\\ You should use same method in the provided script}},
+  {{Choices,\\ Options,\\ Paths}, {You could use \`{}requests\`{} library to do http GET and POST operations,\\ You can try different backend frameworks such as Django or Flask or FastAPI}}}
+\end{document}
