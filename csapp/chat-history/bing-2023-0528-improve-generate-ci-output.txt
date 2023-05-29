@@ -13,5 +13,22 @@ Great! Please do following steps to the codes, step by step:
 [2] Search your knowledge base, and list several methodologies to manage a large project with multiple functions and modules.
 [3] Review the listed methodologies, and provide possible changes to the codes based on these methodologies. (Also do not output code in this step.)
 [4] Output the codes with changes you provided in the previous steps.
-[5] Summarize above code changes to a git commit message, in the format of `[<Change_type>]: <Change_Summary>`.
+[5] Summarize above code changes to a git commit message, in the format of `[<Change_type>] <Change_Summary>`.
 [6] After finishing the steps above, recall our conversations, and then suggest four instructions related to this topic, which I might ask you to do for diving deeper and moving forward in this task.
+
+
+Great! Please do following steps to the codes, step by step:
+[1] Search your knowledge base, and list three commonly used techniques of Object-oriented programming and Modular programming methodologies.
+[2] Based on the listed techniques in step 1, apply changes to the latest codes.
+[3] Provide the structure of modules in this script.
+[4] Summarize code changes in step 2 to a git commit message, in the format of `[<Change_type>] <Change_Summary>`.
+[5] After finishing the steps above, recall our conversations, and then suggest four instructions related to this topic, which I might ask you to do for diving deeper and moving forward in this task.
+
+
+Great! Please do following steps to the codes, step by step:
+[1] When running `Program.create_directory("CI_output")` in `generate_CI_output()`, it shows error: `TypeError: create_directory() missing 1 required positional argument: 'path'`. Please fix this error. (Only output the codes that are changed.)
+[2] Remove the `CI_output` dir before each generation, to make sure the generated file structure is clean. (Only output the codes that are changed.)
+[4] Summarize code changes in above steps to a git commit message, in the format of `[<Change_type>] <Change_Summary>`.
+[5] After finishing the steps above, recall your answer, and then suggest three instructions, which I might ask you to do for diving deeper and moving forward in this task.
+
+[Fix] Fix error when calling create_directory method and remove CI_output directory before each generation
