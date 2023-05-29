@@ -1,8 +1,10 @@
 import os
 import csv
+import datetime
 from faker import Faker
 import numpy as np
 import pandas as pd
+from typing import Union
 
 fake = Faker()
 
@@ -24,8 +26,12 @@ def generate_CI_output():
         "CPU_tests", ["sorting_algorithm_test", "prime_number_generation_test"]
     )
 
+    # Generate data for additional programs and test cases
+    generate_program_data("Network_tests", ["ping_test", "bandwidth_test"])
+    generate_program_data("Storage_tests", ["read_write_test", "file_transfer_test"])
 
-def generate_program_data(program_name, test_cases):
+
+def generate_program_data(program_name: str, test_cases: list[str]):
     """
     Generate data for a program
 
@@ -35,10 +41,15 @@ def generate_program_data(program_name, test_cases):
     # Create program directory
     program_dir = create_directory(os.path.join("CI_output", program_name))
 
-    # Generate data for each datetime
-    for datetime in ["2023-05-01-14-04-31", "2023-05-02-15-30-00"]:
+    # Generate data for each datetime in range
+    start_date = datetime.date(2023, 5, 1)
+    end_date = datetime.date(2023, 5, 31)
+    delta = datetime.timedelta(days=1)
+    current_date = start_date
+    while current_date <= end_date:
+        datetime_str = current_date.strftime("%Y-%m-%d-%H-%M-%S")
         # Create datetime directory
-        datetime_dir = create_directory(os.path.join(program_dir, datetime))
+        datetime_dir = create_directory(os.path.join(program_dir, datetime_str))
 
         # Generate regression.csv file
         generate_regression_csv(datetime_dir)
@@ -47,8 +58,10 @@ def generate_program_data(program_name, test_cases):
         for test_case in test_cases:
             generate_test_case_data(datetime_dir, test_case)
 
+        current_date += delta
 
-def create_directory(path):
+
+def create_directory(path: str) -> str:
     """
     Create a directory
 
@@ -59,7 +72,7 @@ def create_directory(path):
     return path
 
 
-def generate_regression_csv(datetime_dir):
+def generate_regression_csv(datetime_dir: str):
     """
     Generate regression.csv file
 
@@ -75,7 +88,7 @@ def generate_regression_csv(datetime_dir):
         print(f"Error generating regression.csv file: {e}")
 
 
-def simulate_regression_data():
+def simulate_regression_data() -> list[list[Union[str, float]]]:
     """
     Simulate data for regression.csv file
 
@@ -88,7 +101,7 @@ def simulate_regression_data():
     return data
 
 
-def write_csv(file_path, data):
+def write_csv(file_path: str, data: list[list[Union[str, float]]]):
     """
     Write data to csv file using Pandas
 
@@ -99,12 +112,12 @@ def write_csv(file_path, data):
     df.to_csv(file_path, index=False)
 
 
-def generate_test_case_data(datetime_dir, test_case):
+def generate_test_case_data(datetime_dir: str, test_case: str):
     """
     Generate data for a test case
 
     :param datetime_dir: Path to datetime directory
-    :param test_case: Test case to test
+    :param test_case: Name of test case
     """
     # Create test case directory
     test_case_dir = create_directory(os.path.join(datetime_dir, test_case))
@@ -122,7 +135,7 @@ def generate_test_case_data(datetime_dir, test_case):
     write_csv(os.path.join(test_case_dir, f"{test_case}.csv"), csv_data)
 
 
-def simulate_log_data(test_case):
+def simulate_log_data(test_case: str) -> str:
     """
     Simulate data for log file using Faker
 
@@ -140,7 +153,7 @@ def simulate_log_data(test_case):
     return log_data
 
 
-def write_file(file_path, data):
+def write_file(file_path: str, data: str):
     """
     Write data to file
 
@@ -151,7 +164,7 @@ def write_file(file_path, data):
         f.write(data)
 
 
-def simulate_csv_data():
+def simulate_csv_data() -> list[list[Union[str, float]]]:
     """
     Simulate data for csv file using NumPy
 
