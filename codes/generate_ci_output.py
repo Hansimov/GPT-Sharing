@@ -12,7 +12,7 @@ def generate_CI_output():
     Generate test data for CI_output directory
     """
     # Create CI_output directory
-    os.makedirs("CI_output", exist_ok=True)
+    create_directory("CI_output")
 
     # Generate data for GPU_tests
     generate_program_data(
@@ -33,14 +33,12 @@ def generate_program_data(program_name, test_cases):
     :param test_cases: List of test cases
     """
     # Create program directory
-    program_dir = os.path.join("CI_output", program_name)
-    os.makedirs(program_dir, exist_ok=True)
+    program_dir = create_directory(os.path.join("CI_output", program_name))
 
     # Generate data for each datetime
     for datetime in ["2023-05-01-14-04-31", "2023-05-02-15-30-00"]:
         # Create datetime directory
-        datetime_dir = os.path.join(program_dir, datetime)
-        os.makedirs(datetime_dir, exist_ok=True)
+        datetime_dir = create_directory(os.path.join(program_dir, datetime))
 
         # Generate regression.csv file
         generate_regression_csv(datetime_dir)
@@ -48,6 +46,17 @@ def generate_program_data(program_name, test_cases):
         # Generate data for each test case
         for test_case in test_cases:
             generate_test_case_data(datetime_dir, test_case)
+
+
+def create_directory(path):
+    """
+    Create a directory
+
+    :param path: Path to directory
+    :return: Path to created directory
+    """
+    os.makedirs(path, exist_ok=True)
+    return path
 
 
 def generate_regression_csv(datetime_dir):
@@ -58,18 +67,36 @@ def generate_regression_csv(datetime_dir):
     """
     try:
         # Simulate data for regression.csv file
-        result_difference = np.random.normal(loc=0.0, scale=1.0, size=4)
-        time_difference = np.random.normal(loc=0.0, scale=0.1, size=4)
-        data = [["test_case", "result_difference", "time_difference"]]
-        data.extend(
-            [[i + 1, result_difference[i], time_difference[i]] for i in range(4)]
-        )
+        data = simulate_regression_data()
 
         # Write data to regression.csv file using Pandas
-        df = pd.DataFrame(data[1:], columns=data[0])
-        df.to_csv(os.path.join(datetime_dir, "regression.csv"), index=False)
+        write_csv(os.path.join(datetime_dir, "regression.csv"), data)
     except Exception as e:
         print(f"Error generating regression.csv file: {e}")
+
+
+def simulate_regression_data():
+    """
+    Simulate data for regression.csv file
+
+    :return: Simulated data
+    """
+    result_difference = np.random.normal(loc=0.0, scale=1.0, size=4)
+    time_difference = np.random.normal(loc=0.0, scale=0.1, size=4)
+    data = [["test_case", "result_difference", "time_difference"]]
+    data.extend([[i + 1, result_difference[i], time_difference[i]] for i in range(4)])
+    return data
+
+
+def write_csv(file_path, data):
+    """
+    Write data to csv file using Pandas
+
+    :param file_path: Path to csv file
+    :param data: Data to write
+    """
+    df = pd.DataFrame(data[1:], columns=data[0])
+    df.to_csv(file_path, index=False)
 
 
 def generate_test_case_data(datetime_dir, test_case):
@@ -77,38 +104,64 @@ def generate_test_case_data(datetime_dir, test_case):
     Generate data for a test case
 
     :param datetime_dir: Path to datetime directory
-    :param test_case: Name of test case
+    :param test_case: Test case to test
     """
-    try:
-        # Create test case directory
-        test_case_dir = os.path.join(datetime_dir, test_case)
-        os.makedirs(test_case_dir, exist_ok=True)
+    # Create test case directory
+    test_case_dir = create_directory(os.path.join(datetime_dir, test_case))
 
-        # Simulate data for log file using Faker
-        log_data = (
-            f"[INFO] {test_case} started at {fake.date_time_this_year()}\n"
-            f"[INFO] Processing input 1\n"
-            f"[WARNING] {fake.sentence()}\n"
-            f"[INFO] Processing input 2\n"
-            f"[ERROR] {fake.sentence()}\n"
-            f"[INFO] {test_case} finished at {fake.date_time_this_year()}\n"
-        )
+    # Simulate data for log file using Faker
+    log_data = simulate_log_data(test_case)
 
-        # Write data to log file
-        with open(os.path.join(test_case_dir, f"{test_case}.log"), "w") as f:
-            f.write(log_data)
+    # Write data to log file
+    write_file(os.path.join(test_case_dir, f"{test_case}.log"), log_data)
 
-        # Simulate data for csv file using NumPy
-        result = np.random.choice(["PASS", "FAIL"], size=4)
-        time = np.random.uniform(low=0.5, high=1.5, size=4)
-        data = [["input", "result", "time"]]
-        data.extend([[i + 1, result[i], time[i]] for i in range(4)])
+    # Simulate data for csv file using NumPy
+    csv_data = simulate_csv_data()
 
-        # Write data to csv file using Pandas
-        df = pd.DataFrame(data[1:], columns=data[0])
-        df.to_csv(os.path.join(test_case_dir, f"{test_case}.csv"), index=False)
-    except Exception as e:
-        print(f"Error generating test case data: {e}")
+    # Write data to csv file using Pandas
+    write_csv(os.path.join(test_case_dir, f"{test_case}.csv"), csv_data)
+
+
+def simulate_log_data(test_case):
+    """
+    Simulate data for log file using Faker
+
+    :param test_case: Name of test case
+    :return: Simulated log data
+    """
+    log_data = (
+        f"[INFO] {test_case} started at {fake.date_time_this_year()}\n"
+        f"[INFO] Processing input 1\n"
+        f"[WARNING] {fake.sentence()}\n"
+        f"[INFO] Processing input 2\n"
+        f"[ERROR] {fake.sentence()}\n"
+        f"[INFO] {test_case} finished at {fake.date_time_this_year()}\n"
+    )
+    return log_data
+
+
+def write_file(file_path, data):
+    """
+    Write data to file
+
+    :param file_path: Path to file
+    :param data: Data to write
+    """
+    with open(file_path, "w") as f:
+        f.write(data)
+
+
+def simulate_csv_data():
+    """
+    Simulate data for csv file using NumPy
+
+    :return: Simulated csv data
+    """
+    result = np.random.choice(["PASS", "FAIL"], size=4)
+    time = np.random.uniform(low=0.5, high=1.5, size=4)
+    data = [["input", "result", "time"]]
+    data.extend([[i + 1, result[i], time[i]] for i in range(4)])
+    return data
 
 
 if __name__ == "__main__":

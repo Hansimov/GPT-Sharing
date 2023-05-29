@@ -80,3 +80,11 @@ Great! Please do the following steps:
 [2] Search your knowledge base, and list four important aspects in software testing.
 [3] Review your generated codes, provide a plan to improve your codes based on the aspects in step 1 and step 2.
 [4] Based on the plan you provide in step 3, improve the codes.
+
+
+Great! Please do the following steps:
+[1] Search your knowledge base, and list four popular methods to refactor codes that make it more modular and reusable.
+[2] Based on the methods you list in step 1, refactor your codes.
+[3] Search your knowledge base, and list several popular libraries or frameworks to improve the code?
+[4] Based on your answer in step 3, improve the codes again.
+[5] After finishing the steps above, recall our conversations, and then suggest four instructions related to this topic, which I might ask you to do for diving deeper and moving forward in this task.
