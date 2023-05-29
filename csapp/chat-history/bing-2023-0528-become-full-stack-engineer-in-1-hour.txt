@@ -64,6 +64,19 @@ Please answer the following questions one by one:
 
 
 Please do the following steps:
-[1] Search your knowledge base, and list some useful framework and libraries which are designed and suitable for generating realistic data for the log and csv files
-[2] Describe the structure and organization of the scripts which generate these simulated data in `CI_output`.
-[3] 
+[1] Search your knowledge base, and list some popular third-party framework and libraries which are designed and suitable for generating realistic data for the log and csv files.
+[2] Memorize and examine your answer in previous step , then output a table which compare the pros and cons of these libraries, and provide recommendation suggestions based on each pro and con.
+[3] After finishing the steps above, you should suggest three questions related to this topic, which I might ask you for diving deeper and moving forward in this task.
+
+
+Great! Please do the following steps:
+[1] Recall the steps of generating the test data of "CI_output" in Python, and re-describe the structure and organization of the scripts which generate these simulated data in `CI_output`.
+[2] Use `Faker`, `Numpy` and `Pandas` to generate realistic test output data described in the previous step.
+[3] After finishing the steps above, recall our conversations, and then suggest four questions related to this topic, which I might ask you for diving deeper and moving forward in this task.
+
+
+Great! Please do the following steps:
+[1] Search your knowledge base, and list four important aspects in software development.
+[2] Search your knowledge base, and list four important aspects in software testing.
+[3] Review your generated codes, provide a plan to improve your codes based on the aspects in step 1 and step 2.
+[4] Based on the plan you provide in step 3, improve the codes.
