@@ -101,4 +101,5 @@ Great! Please do improvements to following issues, step by step:
 [1] The content of each log is little, please enhance function `simulate_log_data` to make the log content more detailed and realistic, related to the test case.
 [2] Current regressions are generated, not calculated, please re-write function `generate_regression_csv` to make the regression csvs calculated from the csvs of test cases.
 [3] Current generated data are random, so it is hard to stably test the effects of the changes to this script, please think a way to make the data stable and reproducible.
-[4] After finishing the steps above, recall our conversations, and then suggest four instructions related to this topic, which I might ask you to do for diving deeper and moving forward in this task.
+[4] Summarize above code changes to a git commit message, in the format of `[<Change_type>]: <Change_Summary>`.
+[5] After finishing the steps above, recall our conversations, and then suggest four instructions related to this topic, which I might ask you to do for diving deeper and moving forward in this task.

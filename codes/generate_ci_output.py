@@ -49,7 +49,7 @@ def generate_program_data(program_name: str, test_cases: list[str]):
     delta = datetime.timedelta(days=1)
     current_date = start_date
     while current_date <= end_date:
-        datetime_str = current_date.strftime("%Y-%m-%d-%H-%M-%S")
+        datetime_str = current_date.strftime("%Y-%m%d-%H%M%S")
         # Create datetime directory
         datetime_dir = create_directory(os.path.join(program_dir, datetime_str))
 

@@ -1,0 +1,17 @@
+I will provide you a Python script, please analyze the codes carefully, and then do following steps:
+[1] Describe what this script does. One thing I can tell you that this script is used to generate a file structure of csvs and logs, which are used as the test data for building a website with backend and frontend.
+[2] Provide the structure of generated directories and files by this script.
+[2] Split the script to several parts of modules or classes, to make sure the codes inside each part are relative, and the codes outside are as independent as possible.
+
+Here is the whole Python script:
+
+```
+```
+
+Great! Please do following steps to the codes, step by step:
+[1] Change the datetime format from `"%Y-%m-%d-%H-%M-%S"` to `"%Y-%m%d-%H%M%S"`. (Do not output code in this step.)
+[2] Search your knowledge base, and list several methodologies to manage a large project with multiple functions and modules.
+[3] Review the listed methodologies, and provide possible changes to the codes based on these methodologies. (Also do not output code in this step.)
+[4] Output the codes with changes you provided in the previous steps.
+[5] Summarize above code changes to a git commit message, in the format of `[<Change_type>]: <Change_Summary>`.
+[6] After finishing the steps above, recall our conversations, and then suggest four instructions related to this topic, which I might ask you to do for diving deeper and moving forward in this task.
