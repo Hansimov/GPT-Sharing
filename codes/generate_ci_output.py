@@ -6,7 +6,9 @@ import numpy as np
 import pandas as pd
 from typing import Union
 
+np.random.seed(0)
 fake = Faker()
+fake.seed_instance(0)
 
 
 def generate_CI_output():
@@ -79,13 +81,36 @@ def generate_regression_csv(datetime_dir: str):
     :param datetime_dir: Path to datetime directory
     """
     try:
-        # Simulate data for regression.csv file
-        data = simulate_regression_data()
+        # Calculate data for regression.csv file
+        data = calculate_regression_data(datetime_dir)
 
         # Write data to regression.csv file using Pandas
         write_csv(os.path.join(datetime_dir, "regression.csv"), data)
     except Exception as e:
         print(f"Error generating regression.csv file: {e}")
+
+
+def calculate_regression_data(datetime_dir: str) -> list[list[Union[str, float]]]:
+    """
+    Calculate data for regression.csv file
+
+    :param datetime_dir: Path to datetime directory
+    :return: Calculated data
+    """
+    data = [["test_case", "result_difference", "time_difference"]]
+    for test_case_dir in os.listdir(datetime_dir):
+        if os.path.isdir(os.path.join(datetime_dir, test_case_dir)):
+            test_case_csv = os.path.join(
+                datetime_dir, test_case_dir, f"{test_case_dir}.csv"
+            )
+            if os.path.exists(test_case_csv):
+                df = pd.read_csv(test_case_csv)
+                result_difference = df["result"].value_counts().get("PASS", 0) - df[
+                    "result"
+                ].value_counts().get("FAIL", 0)
+                time_difference = df["time"].max() - df["time"].min()
+                data.append([test_case_dir, result_difference, time_difference])
+    return data
 
 
 def simulate_regression_data() -> list[list[Union[str, float]]]:
@@ -142,13 +167,15 @@ def simulate_log_data(test_case: str) -> str:
     :param test_case: Name of test case
     :return: Simulated log data
     """
+    start_time = fake.date_time_this_year()
+    end_time = start_time + datetime.timedelta(minutes=5)
     log_data = (
-        f"[INFO] {test_case} started at {fake.date_time_this_year()}\n"
+        f"[INFO] {test_case} started at {start_time}\n"
         f"[INFO] Processing input 1\n"
         f"[WARNING] {fake.sentence()}\n"
         f"[INFO] Processing input 2\n"
         f"[ERROR] {fake.sentence()}\n"
-        f"[INFO] {test_case} finished at {fake.date_time_this_year()}\n"
+        f"[INFO] {test_case} finished at {end_time}\n"
     )
     return log_data
 
