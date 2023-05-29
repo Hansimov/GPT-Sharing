@@ -73,4 +73,22 @@ Great! Please do following steps to the codes, step by step:
 
 Great! Please do following steps to the codes, step by step:
 [1] I do not like your improvements with simply adding `_test_case_*` to the end. Please use some more meaningful names for test cases as the codes do before, such as: `matrix_multiplication` and `image_processing` for `GPU`, and `sorting_algorithm` and `prime_number_generation` for CPU.
-[2] 
+[2] In `simulate_csv_data`, I do not like the way of using `if-else` to generate data. Please use a more general way.
+```
+        if test_case == "matrix_multiplication_test":
+            matrix_size = np.random.randint(low=100, high=1000, size=4)
+            data = [["input", "result", "time", "matrix_size"]]
+            data.extend([[i + 1, result[i], time[i], matrix_size[i]] for i in range(4)])
+        elif test_case == "image_processing_test":
+            image_size = np.random.randint(low=512, high=4096, size=4)
+            data = [["input", "result", "time", "image_size"]]
+            data.extend([[i + 1, result[i], time[i], image_size[i]] for i in range(4)])
+        else:
+            data = [["input", "result", "time"]]
+            data.extend([[i + 1, result[i], time[i]] for i in range(4)])
+        return data
+```
+
+Great! Please do following steps to the codes, step by step:
+[1] The code structures `generate_matrix_multiplication_data` and `generate_image_processing_data` are similar, and I do not like to use duplicated codes. Also, this kind of codes are hard to extend in future, suppose you have many other different test cases data to generate. Please search your knowledge base to find common methods to improve this, and then apply the improvements to the codes.
+[2] Not all functions and lines need a docstring or comment, it would make the codes verbose, such as `write_file` and `create_directory` do not need docstring, and some lines with readable and simple functions do not need comments. Please review the latest whole codes, and then list the functions, classes and modules whose comments and docstring are not necessary.

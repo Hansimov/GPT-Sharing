@@ -44,12 +44,6 @@ class Program:
 
     @staticmethod
     def create_directory(path: str) -> str:
-        """
-        Create a directory
-
-        :param path: Path to directory
-        :return: Path to created directory
-        """
         os.makedirs(path, exist_ok=True)
         return path
 
@@ -155,12 +149,6 @@ class Program:
         return log_data
 
     def write_file(self, file_path: str, data: str):
-        """
-        Write data to file
-
-        :param file_path: Path to file
-        :param data: Data to write
-        """
         with open(file_path, "w") as f:
             f.write(data)
 
@@ -174,48 +162,35 @@ class Program:
         result = np.random.choice(["PASS", "FAIL"], size=4)
         time = np.random.uniform(low=0.5, high=1.5, size=4)
 
-        # Define a dictionary that maps test case names to their corresponding data generation functions
-        test_case_data_generators = {
-            "matrix_multiplication_test": self.generate_matrix_multiplication_data,
-            "image_processing_test": self.generate_image_processing_data,
+        # Define a configuration object that specifies the data generation parameters for each test case
+        test_case_config = {
+            "matrix_multiplication_test": {
+                "columns": ["input", "result", "time", "matrix_size"],
+                "data": {
+                    "matrix_size": np.random.randint(low=100, high=1000, size=4),
+                },
+            },
+            "image_processing_test": {
+                "columns": ["input", "result", "time", "image_size"],
+                "data": {
+                    "image_size": np.random.randint(low=512, high=4096, size=4),
+                },
+            },
         }
 
-        # Call the corresponding data generation function for the given test case
-        if test_case in test_case_data_generators:
-            data = test_case_data_generators[test_case](result, time)
+        # Generate data based on the configuration object
+        if test_case in test_case_config:
+            config = test_case_config[test_case]
+            columns = config["columns"]
+            data = [columns]
+            for i in range(4):
+                row = [i + 1, result[i], time[i]]
+                for column in columns[3:]:
+                    row.append(config["data"][column][i])
+                data.append(row)
         else:
             data = [["input", "result", "time"]]
             data.extend([[i + 1, result[i], time[i]] for i in range(4)])
-        return data
-
-    def generate_matrix_multiplication_data(
-        self, result: np.ndarray, time: np.ndarray
-    ) -> list[list[Union[str, float]]]:
-        """
-        Generate data for matrix_multiplication_test
-
-        :param result: Result array
-        :param time: Time array
-        :return: Generated data
-        """
-        matrix_size = np.random.randint(low=100, high=1000, size=4)
-        data = [["input", "result", "time", "matrix_size"]]
-        data.extend([[i + 1, result[i], time[i], matrix_size[i]] for i in range(4)])
-        return data
-
-    def generate_image_processing_data(
-        self, result: np.ndarray, time: np.ndarray
-    ) -> list[list[Union[str, float]]]:
-        """
-        Generate data for image_processing_test
-
-        :param result: Result array
-        :param time: Time array
-        :return: Generated data
-        """
-        image_size = np.random.randint(low=512, high=4096, size=4)
-        data = [["input", "result", "time", "image_size"]]
-        data.extend([[i + 1, result[i], time[i], image_size[i]] for i in range(4)])
         return data
 
 
