@@ -112,35 +112,46 @@ class Program:
         # Create test case directory
         test_case_dir = self.create_directory(os.path.join(datetime_dir, test_case))
 
-        # Simulate data for log file using Faker
-        log_data = self.simulate_log_data(test_case)
-
-        # Write data to log file
-        self.write_file(os.path.join(test_case_dir, f"{test_case}.log"), log_data)
-
         # Simulate data for csv file using NumPy
-        csv_data = self.simulate_csv_data()
+        csv_data = self.simulate_csv_data(test_case)
 
         # Write data to csv file using Pandas
         self.write_csv(os.path.join(test_case_dir, f"{test_case}.csv"), csv_data)
 
-    def simulate_log_data(self, test_case: str) -> str:
+        # Simulate data for log file using Faker
+        log_data = self.simulate_log_data(test_case, csv_data)
+
+        # Write data to log file
+        self.write_file(os.path.join(test_case_dir, f"{test_case}.log"), log_data)
+
+    def simulate_log_data(
+        self, test_case: str, csv_data: list[list[Union[str, float]]]
+    ) -> str:
         """
         Simulate data for log file using Faker
 
         :param test_case: Name of test case
+        :param csv_data: Data from csv file
         :return: Simulated log data
         """
         start_time = fake.date_time_this_year()
         end_time = start_time + datetime.timedelta(minutes=5)
-        log_data = (
-            f"[INFO] {test_case} started at {start_time}\n"
-            f"[INFO] Processing input 1\n"
-            f"[WARNING] {fake.sentence()}\n"
-            f"[INFO] Processing input 2\n"
-            f"[ERROR] {fake.sentence()}\n"
-            f"[INFO] {test_case} finished at {end_time}\n"
-        )
+        log_data = f"[INFO] {test_case} started at {start_time}\n"
+        if test_case == "matrix_multiplication_test":
+            log_data += f"[INFO] Initializing matrices for multiplication\n"
+        elif test_case == "image_processing_test":
+            log_data += f"[INFO] Loading images for processing\n"
+        for row in csv_data[1:]:
+            input_data = row[0]
+            result = row[1]
+            time = row[2]
+            log_data += f"[INFO] Processing input {input_data}\n"
+            if result == "PASS":
+                log_data += f"[INFO] Test case {test_case} passed for input {input_data} in {time} seconds\n"
+            else:
+                log_data += f"[ERROR] Test case {test_case} failed for input {input_data} in {time} seconds\n"
+                log_data += f"[WARNING] {fake.sentence()}\n"
+        log_data += f"[INFO] {test_case} finished at {end_time}\n"
         return log_data
 
     def write_file(self, file_path: str, data: str):
@@ -153,16 +164,26 @@ class Program:
         with open(file_path, "w") as f:
             f.write(data)
 
-    def simulate_csv_data(self) -> list[list[Union[str, float]]]:
+    def simulate_csv_data(self, test_case: str) -> list[list[Union[str, float]]]:
         """
         Simulate data for csv file using NumPy
 
+        :param test_case: Name of test case
         :return: Simulated csv data
         """
         result = np.random.choice(["PASS", "FAIL"], size=4)
         time = np.random.uniform(low=0.5, high=1.5, size=4)
-        data = [["input", "result", "time"]]
-        data.extend([[i + 1, result[i], time[i]] for i in range(4)])
+        if test_case == "matrix_multiplication_test":
+            matrix_size = np.random.randint(low=100, high=1000, size=4)
+            data = [["input", "result", "time", "matrix_size"]]
+            data.extend([[i + 1, result[i], time[i], matrix_size[i]] for i in range(4)])
+        elif test_case == "image_processing_test":
+            image_size = np.random.randint(low=512, high=4096, size=4)
+            data = [["input", "result", "time", "image_size"]]
+            data.extend([[i + 1, result[i], time[i], image_size[i]] for i in range(4)])
+        else:
+            data = [["input", "result", "time"]]
+            data.extend([[i + 1, result[i], time[i]] for i in range(4)])
         return data
 
 
