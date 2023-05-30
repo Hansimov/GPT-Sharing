@@ -1,4 +1,4 @@
-d# bing-2023-0528-become-full-stack-engineer-in-1-hour
+# bing-2023-0528-become-full-stack-engineer-in-1-hour
 
 ## Chat 1
 
