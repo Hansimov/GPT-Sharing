@@ -1,16 +1,16 @@
 \documentclass[border=10pt]{standalone}
 \usepackage{smartdiagram}
 \smartdiagramset{
-    descriptive items y sep=2,
-    description title width=2.25cm,
-    description title text width=2.25cm,
+    descriptive items y sep=2.5,
+    description title width=2.5cm,
+    description title text width=2.5cm,
     description text width=12cm
 }
 \begin{document}
 \smartdiagram[descriptive diagram]
 {
-  {{Thoughts Chain},{Let's think step by step}},
-  {{Actions Chain}, {}},
-  {{Self Ask},{}},
-  {{Self Check}, {Please Rephrase/Check/Feedback/Refine/Criticize your answer above}}}
+  {{Self\\ Ask/Search}, {Search you knowledge base, and list ..\\ Suggest three instructions which I might ask you to do for diving deeper and moving forward in this task }},
+  {{Self\\ Check/Reason}, {Please Rephrase/Check/Feedback/Refine/Criticize your answer above,\\ Design several indicators to evaluate the solutions you suggest above,\\ Recommend the best solution based on reasonable aspects}},
+  {{Chain/Tree of Thoughts/Actions}, {Let's think step by step,\\ Please do the following steps: [1] [2] [3] [4],\\ Please answer these questions one by one,\\ I would like to .., you should help me ..: 1st consider multiple solutions, 2nd analyze these solutions based on several aspects, 3rd choose the best for me}},
+}
 \end{document}
