@@ -13,3 +13,6 @@
 *.snm
 *.toc
 *.xml
+
+# vscode
+.vscode

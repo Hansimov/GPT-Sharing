@@ -1,0 +1,19 @@
+Search the web, then suggest several frontend templates to display texts as chat-alike.
+
+Great! Now I also expect that some chats could be collapsed, and user can jump to specified chat via search or index.
+
+Great! I have some markdown files which contain the chats, how could I use these markdown files as inputs or external resources, then render them to chat-alike UI?
+
+Great! I have json files which contain the chats, how could I use these json files as inputs or external resources, then render them to chat-alike UI?
+
+Fine. Then in latex beamer, is there a method to display markdown in a scrollable box?
+
+How to collapse and expand a part of the text in latex beamer?
+
+
+OK, I would like to use reveal.js to present the chats, how to do that?
+
+Please search the web, then provide an example to present the chat texts in markdown format in reveal.js.
+
+Suppose I have a markdown file named "chat.md", how to render this markdown file in reveal.js.
+Please provide full code example.
