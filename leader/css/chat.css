@@ -1,0 +1,16 @@
+.chat {
+  bottom: 0px;
+  font-size: 12pt;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  text-align: left;
+}
+
+emp {
+  color: cyan;
+}
+
+question {
+  white-space: pre;
+  background-color: gray;
+}
