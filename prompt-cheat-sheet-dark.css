@@ -1,5 +1,8 @@
-html * {
+body {
   background-color: #272727;
+}
+
+html * {
   color: #b0b0b0;
   font-family: Arial;
 }
