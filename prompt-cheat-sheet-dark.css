@@ -1,0 +1,16 @@
+html * {
+  background-color: #272727;
+  color: #b0b0b0;
+  font-family: Arial;
+}
+
+root {
+  font-size: 22px;
+  color: #e8e8e8;
+  font-weight: bold;
+}
+
+l2 {
+  font-size: 18px !important;
+  font-weight: bold !important;
+}

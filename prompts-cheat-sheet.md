@@ -2,13 +2,15 @@
 markmap:
   colorFreezeLevel: 4
   duration: 250
+  extraCss:
+    - "./prompts-cheat-sheet.css"
 ---
 
 
-# <big><big><b>Prompts Engineering Cheat Sheet</b></big></big>
+# <root>Prompts Engineering Cheat Sheet</root>
 
-## <big><b>More Informative</b></big>
-### Detailed ...
+## <l2>More Informative</l2>
+### <l3>Detailed ...</l3>
 - Roles
   - Act as Python expert
   - You are an experienced Frontend programmer
@@ -22,7 +24,7 @@ markmap:
 - Questions
   - Could you give some suggestions on this plan
   - Can you summarize the goal of the codes
-### Additional ...
+### <l3>Additional ...</l3>
 - Examples, Shots
   - Here is an example
   - The output should be similar to the following formats
@@ -31,7 +33,7 @@ markmap:
   - You could use \`requests\` library to do http GET and POST operations
   - You can try different backend frameworks such as Django or Flask or FastAPI
 
-## <big><b>Less Ambiguous</b></big>
+## <l2>Less Ambiguous</l2>
 ### Formatted ...
 - Inputs
   - The contents in triple backticks are the Python codes for ... that I want to improve: <br>\`\`\`py<br>(Here are the codes)<br>\`\`\`
@@ -52,19 +54,19 @@ markmap:
   - Let's go back to the topic / task of ...
   - Let's dive deeper and move forward in the step of ...
 
-## <big><b>Top-Down</b></big>
+## <l2>Top-Down</l2>
 ### Divide and Conquer (Sub-tasks)
 ### Recursion
 ### Search then Reason, Plan then Action
   - Search the web first, then examine the results, then plan the steps to ...
   - Analyze the requirements first, then re-organize them into a list of tasks, then do the tasks one by one
 
-## <big><b>Bottom-up</b></big>
+## <l2>Bottom-up</l2>
 ### Dynamic Programming
 ### Memorization
 ### Quantitative to Qualitative <br> <small>(Many a little make a mickle)</small>
 
-## <big><b>Iterate</b></big>
+## <l2>Iterate</l2>
 
 ### Self Ask / Search
 - Search you knowledge base, and list ...
@@ -80,7 +82,7 @@ markmap:
 - I would like to ..., you should:<br>1st ... 2nd ... 3rd ...
 - Please do the following steps:<br>[1] ... [2] ... [3] ... [4] ...
 
-## <big><b>Hacker Spirit</b></big>
+## <l2>Hacker Spirit</l2>
 ### Inject
 ### Leak
 ### Jailbreak
