@@ -5,7 +5,7 @@ markmap:
 ---
 
 
-# <root>Prompt Engineering Cheat Sheet<br><ft>(Group by Principles)</ft></root>
+# <root>Prompts Cheat Sheet<br><ft>(Group by Principles)</ft></root>
 
 ## <l2>More Informative</l2>
 ### <l3>Detailed ...</l3>

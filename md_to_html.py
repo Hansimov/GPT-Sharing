@@ -8,7 +8,7 @@ class MD2HTML:
     def __init__(self):
         self.md_filename = "prompts-cheat-sheet.md"
         self.html_filename = Path(self.md_filename).stem + ".html"
-        self.css_filename = "./prompt-cheat-sheet-dark.css"
+        self.css_filename = "./prompts-cheat-sheet-dark.css"
 
     def convert_md_to_html(self):
         cmd_md_to_html = (
@@ -31,7 +31,7 @@ class MD2HTML:
         # style_str = f"<style>\n{css_str.cssText.decode()}\n</style>"
         # soup.head.append(BeautifulSoup(style_str, "html.parser"))
 
-        self.soup.title.string = "Prompt Engineering Cheat Sheet"
+        self.soup.title.string = "Prompts Cheat Sheet"
 
     def add_favicon_to_html(self):
         favicon_link_tag = self.soup.new_tag(
