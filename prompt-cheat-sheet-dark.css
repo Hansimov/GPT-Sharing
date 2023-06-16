@@ -1,19 +1,38 @@
 body {
-  background-color: #272727;
+  background-color: #333333;
 }
 
 html * {
-  color: #b0b0b0;
+  color: #cccccc;
   font-family: Arial;
 }
 
 root {
   font-size: 22px;
-  color: #e8e8e8;
+  /* color: #e8e8e8; */
+  color: coral;
   font-weight: bold;
 }
 
 l2 {
-  font-size: 18px !important;
-  font-weight: bold !important;
+  font-size: 18px;
+  color: lightsalmon;
+  /* font-weight: bold !important; */
+}
+
+pr {
+  /* font-family: "Times New Roman"; */
+  /* color: khaki; */
+  color: mediumaquamarine;
+}
+
+html * :hover {
+  color: navajowhite;
+}
+
+ft {
+  font-size: 12px;
+  display: block;
+  text-align: right;
+  color: #aaaaaa;
 }
