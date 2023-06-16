@@ -23,7 +23,9 @@ class MD2HTML:
         self.soup = BeautifulSoup(html_str, "html.parser")
 
     def add_css_to_html(self):
-        css_link_tag = self.soup.new_tag("link", rel="stylesheet", href=css_filename)
+        css_link_tag = self.soup.new_tag(
+            "link", rel="stylesheet", href=self.css_filename
+        )
         self.soup.head.append(css_link_tag)
         # css_str = cssutils.parseFile(css_filename)
         # style_str = f"<style>\n{css_str.cssText.decode()}\n</style>"
@@ -50,3 +52,8 @@ class MD2HTML:
         self.add_css_to_html()
         self.add_favicon_to_html()
         self.dump_to_html()
+
+
+if __name__ == "__main__":
+    md2html = MD2HTML()
+    md2html.run()
