@@ -34,17 +34,19 @@ markmap:
 ## <l2>Less Ambiguous</l2>
 ### <l3>Formatted ...</l3>
 - Inputs
+  - <pr>I would provide you a JSON file which contains the data of ...</pr>
   - <pr>The contents in triple backticks are the Python codes for ... that I want to improve: <br>\`\`\`py<br>(Here are the codes)<br>\`\`\`</pr>
-  - <pr>I would provide you a JSON file which contains the data of ... : <br>\`\`\`json<br>(Here is the JSON data)<br>\`\`\`</pr>
 - Outputs
   - <pr>Answer in table format</pr>
   - <pr>List the outline with numbered bullets at beginning of line</pr>
-  - <pr>You should only output the changed lines in git diff format</pr>
-### <l3>Limit / Constraint ...</l3>
-  - Length, Size
+  - <pr>You should only output the changed lines in git diff format:<br>\`\`\`diff<br>-- original lines<br>++ modified lines<br>\`\`\`</pr>
+### <l3>Limited ...</l3>
+  - Length
     - <pr>Your answer should be no more than 50 words</pr>
   - Content
     - <pr>Do not output whole script, but only output changed functions</pr>
+  - Style
+    - <pr>Your response style should be academic and professional</pr>
   - Tools
     - <pr>You should only use Python standard library</pr>
 ### <l3>Prioritize/Emphasize/Focus/Repeat <br> <ft>(Do ONE thing and do it WELL)</ft></l3>
@@ -52,30 +54,36 @@ markmap:
   - <pr>Let's go back to the topic / task of ...</pr>
   - <pr>Let's dive deeper and move forward in the step of ...</pr>
 
-## <l2>Top-Down</l2>
-### <l3>Divide and Conquer (Sub-tasks)</l3>
-### <l3>Recursion</l3>
-### <l3>Search then Reason, Plan then Action</l3>
+
+## <l2>Keep Iterating</l2>
+
+### <l3>Chain/Tree of Thoughts<br><ft>(Many a little makes a mickle)</ft></l3>
+- Break to Subtasks / Steps
+  - <pr>Here is a math question: ... Let's think step by step</pr>
+  - <pr>I would like to ..., you should:<br>1st ... 2nd ... 3rd ...</pr>
+  - <pr>Please do the following steps:<br>[1] ... [2] ... [3] ... [4] ...</pr>
+
+- Search before Reason,<br>Plan before Action
   - <pr>Search the web first, then examine the results, then plan the steps to ...</pr>
-  - <pr>Analyze the requirements first, then re-organize them into a list of tasks, then do the tasks one by one</pr>
+  - <pr>Analyze the requirements first, then re-organize them into a list of tasks,<br>then do the tasks one by one</pr>
 
-## <l2>Bottom-up</l2>
-### <l3>Dynamic Programming</l3>
-### <l3>Memorization</l3>
-### <l3>Quantitative to Qualitative <br> <ft>(Many a little make a mickle)</ft></l3>
+- Create Multiple Paths
+  - <pr>For this task, you should provide three solutions</pr>
+  - <pr>Analyze this problem from following perspectives respectively:<br>[1] Product Managers; [2] Software engineers; [3] Users.</pr>
 
-## <l2>Iterate</l2>
+- Combine to Summary / Best Solution
+  - <pr>Review the steps above, and suggest a better solution</pr>
+  - <pr>Recall all our conversations, and summarize the key points</pr>
+  - <pr>Evaluate results of the solutions above, recommend the best one</pr>
 
-### <l3>Self Ask / Search</l3>
-- <pr>Search you knowledge base, and list ...</pr>
-- <pr>Suggest three instructions which I might ask you to do for diving deeper and moving forward in this task</pr>
-### <l3>Self Check / Criticize</l3>
-- <pr>Please Rephrase/Check/Feedback/Refine/Criticize your answer above</pr>
-- <pr>Design several indicators to evaluate the solutions you suggest above</pr>
-- <pr>Recommend the best solution based on reasonable aspects</pr>
 
-### <l3>Chain of Thoughts/Actions <br> <ft>(Think/Act Step-by-step)</ft></l3>
-- <pr>Let's think step by step</pr>
-- <pr>Please answer these questions one by one</pr>
-- <pr>I would like to ..., you should:<br>1st ... 2nd ... 3rd ...</pr>
-- <pr>Please do the following steps:<br>[1] ... [2] ... [3] ... [4] ...</pr>
+
+### <l3>Automation</l3>
+
+- Self Ask/Search
+  - <pr>Search you knowledge base, and list ...</pr>
+  - <pr>Suggest three instructions which I might ask you to do for diving deeper and moving forward in this task</pr>
+- Self Check/Criticize
+  - <pr>Please Rephrase/Check/Feedback/Refine/Criticize your answer above</pr>
+  - <pr>Design several indicators to evaluate the solutions you suggest above</pr>
+  - <pr>Recommend the best solution based on reasonable aspects</pr>

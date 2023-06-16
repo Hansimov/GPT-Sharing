@@ -16,8 +16,18 @@ with open(html_filename, "r") as rf:
     html_str = rf.read()
 soup = BeautifulSoup(html_str, "html.parser")
 
-link_tag = soup.new_tag("link", rel="stylesheet", href=css_filename)
-soup.head.append(link_tag)
+soup.title.string = "Prompt Engineering Cheat Sheet"
+
+css_link_tag = soup.new_tag("link", rel="stylesheet", href=css_filename)
+soup.head.append(css_link_tag)
+
+favicon_link_tag = soup.new_tag(
+    "link",
+    rel="shortcut icon",
+    href="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/chatgpt-icon.svg",
+)
+soup.head.append(favicon_link_tag)
+
 
 # css_str = cssutils.parseFile(css_filename)
 # style_str = f"<style>\n{css_str.cssText.decode()}\n</style>"
