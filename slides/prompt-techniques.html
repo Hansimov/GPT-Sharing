@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Prompt Techniques</title>
+
+    <!-- reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <!-- (plugin) notes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+    <!-- (plugin) markdown -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <!-- (plugin) highlight-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css"
+    />
+    <!-- (plugin) menu -->
+    <script src="./plugin/menu/menu.js"></script>
+    <link rel="stylesheet" href="./plugin/menu/menu.css" />
+
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css"
+    />
+    <link rel="stylesheet" href="./css/chat.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>Slide 1</section>
+        <section>Slide 2</section>
+        <section>Slide 3</section>
+        <section
+          data-markdown="./markdowns/bing-2023-0528-become-full-stack-engineer-in-1-hour.md"
+          class="chat"
+        ></section>
+      </div>
+    </div>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu],
+
+        // reveal.js-menu config:
+        // https://github.com/denehyg/reveal.js-menu#configuration
+        menu: {
+          side: "left",
+          width: "normal",
+          numbers: true,
+          titleSelector: "h1, h2, h3",
+          useTextContentForMissingTitles: false,
+          markers: true,
+          custom: false,
+          transitions: false,
+          openButton: true,
+          openSlideNumber: false,
+          keyboard: true,
+          sticky: true,
+          autoOpen: true,
+          delayInit: false,
+          openOnInit: false,
+          loadIcons: true,
+        },
+      });
+    </script>
+  </body>
+</html>
