@@ -18,8 +18,16 @@
   color: orange;
 }
 
-.reveal f {
+c {
   color: cyan;
+}
+
+j {
+  color: coral;
+}
+
+g {
+  color: gray;
 }
 
 .row {
@@ -54,6 +62,23 @@ img {
   /* box-shadow: 0 6px 4px -6px #4e4e4e; */
 }
 
+.img_border {
+  /* border-style: solid;
+  border-color: red; */
+}
+
+.img_blur {
+  filter: grayscale(0.8);
+}
+
 a {
-  text-decoration: none;
+  /* text-decoration: none; */
+}
+
+.slide-number,
+span.slide-number-a,
+span.slide-number-delimiter,
+span.slide-number-b {
+  background-color: transparent !important;
+  color: lightgray;
 }

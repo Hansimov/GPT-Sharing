@@ -61,20 +61,20 @@
           <date>2023.06.21</date>
         </section>
 
+        <!-- 1  -->
         <section>
-          <!-- 1:  -->
-          <h1>Popular LLMs</h1>
+          <j>Popular LLMs</j>
           <div class="row">
             <div class="llm-column">
               <a href="https://www.bing.com/search?q=Bing+AI&showconv=1">
                 <img src="./images/bing-logo.png" />
-                <imgtxt>New Bing</imgtxt>
+                <imgtxt>New Bing (GPT4)</imgtxt>
               </a>
             </div>
             <div class="llm-column">
               <a href="https://chat.openai.com/chat">
                 <img src="./images/chatgpt-logo.svg" />
-                <imgtxt>ChatGPT (3.5 + 4)</imgtxt>
+                <imgtxt>ChatGPT (3.5 & 4)</imgtxt>
               </a>
             </div>
             <div class="llm-column">
@@ -98,7 +98,46 @@
           </div>
         </section>
 
-        <section>Slide 3</section>
+        <!-- 3 -->
+        <section>
+          <j>For most tasks, <c>New Bing</c> + <c>ChatGPT-3.5</c> are sufficient.</j>
+          <div class="row">
+            <div class="llm-column">
+              <a href="https://www.bing.com/search?q=Bing+AI&showconv=1">
+                <img src="./images/bing-logo.png" />
+                <imgtxt><c>New Bing</c></imgtxt>
+              </a>
+            </div>
+            <div class="llm-column">
+              <a href="https://chat.openai.com/chat">
+                <img src="./images/chatgpt-logo.svg" />
+                <imgtxt><c>ChatGPT-3.5</c></imgtxt>
+              </a>
+            </div>
+            <div class="llm-column img_blur">
+              <a href="https://bard.google.com/?hl=en">
+                <img  src="./images/google-bard-logo.png" />
+                <imgtxt><g>Google Bard</g></imgtxt>
+              </a>
+            </div>
+            <div class="llm-column img_blur">
+              <a href="https://poe.com/Claude-instant">
+                <img src="./images/anthropic-logo.png" />
+                <imgtxt><g>Anthropic Claude</g></imgtxt>
+              </a>
+            </div>
+            <div class="llm-column img_blur">
+              <a href="https://github.com/eugeneyan/open-llms">
+                <img src="./images/meta-llama-logo.png" />
+                <imgtxt><g>Open LLMs ...</g></imgtxt>
+              </a>
+            </div>
+          </div>
+        </section>
+        </section>
+
+        <section data-auto-animate>Slide 3</section>
+        <section data-auto-animate>Slide 4</section>
         <!-- <section
           data-markdown="./markdowns/bing-2023-0528-become-full-stack-engineer-in-1-hour.md"
           class="chat"
@@ -115,12 +154,15 @@
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu],
 
         // slides
-        progress: true,
-        slideNumber: true,
+        progress: false,
+        slideNumber: "c/t",
         showSlideNumber: "all",
         navigationMode: "linear",
-        transition: "convex",
+        transition: "none",
         transitionSpeed: "fast",
+        // autoAnimateEasing: "ease",
+        // autoAnimateDuration: 0.8,
+        // autoAnimateUnmatched: true,
 
         // reveal.js-menu config:
         // https://github.com/denehyg/reveal.js-menu#configuration
@@ -129,7 +171,7 @@
           width: "normal",
           numbers: true,
           titleSelector: "h1, h2, h3",
-          useTextContentForMissingTitles: false,
+          useTextContentForMissingTitles: true,
           markers: true,
           custom: false,
           transitions: false,
