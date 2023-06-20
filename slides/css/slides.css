@@ -1,14 +1,17 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
   text-transform: none;
 }
 
-h1 {
+.reveal h1 {
   color: coral;
+}
+.reveal h2 {
+  /* text-align: left; */
 }
 
 note {
@@ -16,15 +19,26 @@ note {
 }
 
 author {
-  color: orange;
+  color: cyan;
+  font-family: "Georgia";
 }
 
 c {
   color: cyan;
 }
 
+r {
+  color: magenta;
+}
+
 j {
   color: coral;
+}
+j2 {
+  color: coral;
+  font-size: larger;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 gray {
