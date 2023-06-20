@@ -17,3 +17,37 @@
 .reveal author {
   color: orange;
 }
+
+.reveal f {
+  color: cyan;
+}
+
+.row {
+  /* text-align: center; */
+}
+/* Clear floats after image containers */
+/* .row::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+.llm-column {
+  width: 16%;
+  padding: 8px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  filter: drop-shadow(0px 5px 5px #4e4e4e);
+  transition: all 0.2s ease-in-out;
+}
+
+.llm-column:hover {
+  transform: scale(1.2);
+}
+
+imgtxt {
+  font-size: 18px;
+}
+img {
+}

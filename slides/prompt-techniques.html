@@ -38,22 +38,72 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+    />
     <!-- <link rel="stylesheet" href="./css/chat.css" /> -->
     <link rel="stylesheet" href="./css/slides.css" />
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
+        <!-- 0: title page -->
         <section>
           <h1>Prompt Techniques</h1>
-          <note>A Beginner's Guide to Unleash the Power of GPT</note>
+          <note>
+            A Beginner's Guide to Unleash the Power of GPT with Better Prompts
+          </note>
           <!-- <h3>How I Learned to Stop Thinking and Love the GPT</h3> -->
           <br /><br />
           <author>Zehan</author>
           <br /><br />
           <date>2023.06.21</date>
         </section>
-        <section>Slide 2</section>
+
+        <section>
+          <!-- 1:  -->
+          <h1>Popular LLMs</h1>
+          <!-- <div class="r-stack r-stretch"> -->
+          <!-- <img
+              class="fragment fade-out"
+              style="height: 50%"
+              src="./images/spongebob-gpt3-bard-gpt4.jpg"
+            /> -->
+          <!-- <img class="images" src="./images/bing-logo.png" />
+          <img class="images" src="./images/chatgpt-logo.svg" />
+          <img class="images" src="./images/google-bard-logo.svg" /> -->
+          <div class="row">
+            <div class="llm-column">
+              <img src="./images/bing-logo.png" />
+              <imgtxt>New Bing</imgtxt>
+            </div>
+            <div class="llm-column">
+              <img src="./images/chatgpt-logo.svg" />
+              <imgtxt>ChatGPT (3.5 + 4)</imgtxt>
+            </div>
+            <div class="llm-column">
+              <img src="./images/google-bard-logo.png" />
+              <imgtxt>Google Bard</imgtxt>
+            </div>
+            <div class="llm-column">
+              <img src="./images/anthropic-logo.png" />
+              <imgtxt>Anthropic Claude</imgtxt>
+            </div>
+            <div class="llm-column">
+              <img src="./images/meta-llama-logo.png" />
+              <imgtxt>Open LLMs ...</imgtxt>
+            </div>
+          </div>
+          <!-- </div> -->
+          <!-- <img
+            fragment
+            fade-out
+            class="r-stretch"
+            src="./images/bing-logo.png"
+          /> -->
+        </section>
+
         <section>Slide 3</section>
         <!-- <section
           data-markdown="./markdowns/bing-2023-0528-become-full-stack-engineer-in-1-hour.md"
@@ -70,6 +120,7 @@
         hash: true,
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu],
 
+        // slides
         progress: true,
         slideNumber: true,
         showSlideNumber: "all",
