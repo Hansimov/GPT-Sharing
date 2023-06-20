@@ -99,3 +99,20 @@ span.slide-number-b {
   background-color: transparent !important;
   color: lightgray;
 }
+
+/* .fragment.strike:not(.current-fragment) {
+  display: none;
+} */
+
+.fragment.strike.current-fragment {
+  display: block;
+  text-decoration: line-through;
+}
+
+/* .fragment.strike.visible:not(.current-fragment) {
+  color: red;
+  /* display: none; */
+  /* height: 0px;
+    line-height: 0px;
+    font-size: 0px; */
+} */
