@@ -51,6 +51,8 @@ bd {
 f {
   color: gray;
   font-size: 16px;
+  display: block;
+  line-height: 0px;
 }
 
 j2 {
