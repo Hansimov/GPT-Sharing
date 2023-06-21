@@ -39,6 +39,11 @@ j {
   color: coral;
 }
 
+jc {
+  color: coral;
+  text-transform: uppercase;
+}
+
 w {
   text-decoration: cyan wavy underline;
 }
