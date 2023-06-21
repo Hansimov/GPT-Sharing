@@ -32,11 +32,20 @@ cc {
 }
 
 r {
-  color: magenta;
+  color: chocolate;
 }
 
 j {
   color: coral;
+}
+
+w {
+  text-decoration: cyan wavy underline;
+}
+
+bd {
+  border-color: #4e4e4e;
+  border-style: solid;
 }
 
 f {
