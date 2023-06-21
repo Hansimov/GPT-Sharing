@@ -26,6 +26,11 @@ c {
   color: cyan;
 }
 
+cc {
+  opacity: 0.5;
+  color: cyan;
+}
+
 r {
   color: magenta;
 }
@@ -33,6 +38,12 @@ r {
 j {
   color: coral;
 }
+
+f {
+  color: gray;
+  font-size: 16px;
+}
+
 j2 {
   color: coral;
   font-size: larger;
