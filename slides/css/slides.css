@@ -64,8 +64,26 @@ gray {
   transition: all 0.2s ease-in-out;
 }
 
+.chip-chat-column:hover,
 .llm-column:hover {
   transform: scale(1.2);
+}
+
+.fragment.once:not(.current-fragment) {
+  display: none;
+}
+.fragment.once.current-fragment {
+  display: block;
+}
+
+.chip-chat-column {
+  width: 80%;
+  padding: 8px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  filter: drop-shadow(0px 6px 4px #4e4e4e);
+  transition: all 0.2s ease-in-out;
 }
 
 imgtxt {
