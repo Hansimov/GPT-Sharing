@@ -10,6 +10,14 @@ Presentations for GPT training and sharing with experienced software Engineers
 
 ## Commands
 
+Install packages:
+
+```bash
+# [./slides]:
+npm install
+npm install -g decktape
+```
+
 Run local server to real-time preview slides:
 
 ```bash
