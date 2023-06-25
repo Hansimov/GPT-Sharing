@@ -8,7 +8,7 @@
     />
 
     <title>Prompt Techniques</title>
-    <link rel="icon" type="image/x-icon" href="./images/gpt4-logo.jpg">
+    <link rel="icon" type="image/x-icon" href="./images/gpt4-logo.jpg" />
 
     <!-- reveal.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
@@ -70,7 +70,10 @@
             <img class="r-stretch" src="./images/llm-market-map.png" />
           </section>
           <section>
-            <img class="r-stretch" src="./images/foundation-conversational-ai-technologies.png" />
+            <img
+              class="r-stretch"
+              src="./images/foundation-conversational-ai-technologies.png"
+            />
           </section>
           <section>
             <img class="r-stretch" src="./images/foundation-llm-stack-v2.png" />
@@ -78,42 +81,53 @@
         </section>
 
         <section>
-            <j>And you may listen that ChatGPT can be these roles</j>
-            <p class="fragment">Writer<f>(stories, jokes, reports)</f></p>
-            <p class="fragment">Translator<f>(natural, programming, and even visual languages)</f></p>
-            <p class="fragment">Summarizer<f>(articles, papers, codes)</f></p>
-            <p class="fragment">Scheduler<f>(meetings, event reminders)</f></p>
-            <p class="fragment">Assistant<f>(reply emails, reviews, or social media comments)</f></p>
-            <p class="fragment">...<f>(I have discovered a truly remarkable proof of this theorem which this margin is too small to contain)</f></p>
+          <j>And you may listen that ChatGPT can be these roles</j>
+          <p class="fragment">Writer<f>(stories, jokes, reports)</f></p>
+          <p class="fragment">
+            Translator<f>(natural, programming, and even visual languages)</f>
+          </p>
+          <p class="fragment">Summarizer<f>(articles, papers, codes)</f></p>
+          <p class="fragment">Scheduler<f>(meetings, event reminders)</f></p>
+          <p class="fragment">
+            Assistant<f>(reply emails, reviews, or social media comments)</f>
+          </p>
+          <p class="fragment">
+            ...<f
+              >(I have discovered a truly remarkable proof of this theorem which
+              this margin is too small to contain)</f
+            >
+          </p>
         </section>
-        
+
         <section>
           <span class="fragment"><j>LLM can even</j></span>
           <span class="fragment"><r>Design Chip</r>!</span>
           <div class="r-stack">
             <div class="r-stretch fragment current-visible">
-              <img src="./images/chipchat-fig5-8bit-shift-register-gpt4-pic.png" />
-              <br>
+              <img
+                src="./images/chipchat-fig5-8bit-shift-register-gpt4-pic.png"
+              />
+              <br />
               <imgtxt>8-bit shift register (by <c>GPT-4</c>)</imgtxt>
             </div>
             <div class="r-stretch fragment current-visible">
               <img src="./images/chipchat-fig13-accumulator-datapath-pic.png" />
-              <br>
+              <br />
               <imgtxt>Accumulator-based datapath (by <c>GPT-4</c>)</imgtxt>
             </div>
             <div class="r-stretch fragment current-visible">
               <img src="./images/chipchat-fig14-processor-synthesis-pic2.png" />
-              <br>
+              <br />
               <imgtxt>Processor Synthesis Layout</imgtxt>
             </div>
             <div class="r-strech fragment current-visible">
               <img src="./images/chipchat-fig1-llm-design-pic.png" />
-              <br>
+              <br />
               <imgtxt>Use LLM to design hardware</imgtxt>
             </div>
-            <div class="r-stretch  fragment current-visible">
+            <div class="r-stretch fragment current-visible">
               <img src="./images/chipchat-fig2-chat-flowchart-pic.png" />
-              <br>
+              <br />
               <imgtxt>LLM conversation flowchart</imgtxt>
             </div>
           </div>
@@ -124,7 +138,7 @@
           <p class="fragment">+</p>
           <p class="fragment"><c>Prompts</c></p>
         </section>
-        
+
         <!-- 1  -->
         <section>
           <j>Popular LLMs</j>
@@ -182,62 +196,117 @@
               </a>
             </div>
             <div class="llm-column dim">
-                <img src="./images/google-bard-logo.png" />
-                <imgtxt>Google Bard</imgtxt>
+              <img src="./images/google-bard-logo.png" />
+              <imgtxt>Google Bard</imgtxt>
             </div>
             <div class="llm-column dim">
-                <img src="./images/anthropic-logo.png" />
-                <imgtxt>Anthropic Claude</imgtxt>
+              <img src="./images/anthropic-logo.png" />
+              <imgtxt>Anthropic Claude</imgtxt>
             </div>
             <div class="llm-column dim">
-                <img src="./images/meta-llama-logo.png" />
-                <imgtxt>Open LLMs ...</imgtxt>
+              <img src="./images/meta-llama-logo.png" />
+              <imgtxt>Open LLMs ...</imgtxt>
             </div>
           </div>
         </section>
-        
+
         <section>
           <section>
-            <j2>New Bing</j2><br /></large>
-            <p class="fragment">Backed by <c>GPT4</c><f>(While ChatGPT-4 has a limit of 25 messages per 3 hours)</f></p>
+            <j2>New Bing</j2><br />
+            <p class="fragment">
+              Backed by <c>GPT4</c
+              ><f>(While ChatGPT-4 has a limit of 25 messages per 3 hours)</f>
+            </p>
             <p class="fragment">Has access to <c>Web</c></p>
             <p class="fragment">Recognize <c>images</c><f>(New!)</f></p>
-            <p class="fragment">Even registration is not necessary<f>(Sign-in would unlock the limits of messages per session from 5 to 30)</f></p>
-            <p class="fragment">All you need is a valid IP<f>(Most tricky part)</f></p>
+            <p class="fragment">
+              Even registration is not necessary<f
+                >(Sign-in would unlock the limits of messages per session from 5
+                to 30)</f
+              >
+            </p>
+            <p class="fragment">
+              All you need is a valid IP<f>(Most tricky part)</f>
+            </p>
           </section>
           <section>
-            <j2>ChatGPT-3.5</j2><br /></large>
-            <p class="fragment">Abundant third-party <c>plugins</c> and <c>extensions</c></p>
+            <j2>ChatGPT-3.5</j2><br />
+            <p class="fragment">
+              Abundant third-party <c>plugins</c> and <c>extensions</c>
+            </p>
             <p class="fragment">Active <c>community</c> and <c>ecosystem</c></p>
             <p class="fragment">Competent for <c>most tasks</c></p>
-            <span class="fragment">Most importantly,</c></span>
+            <span class="fragment">Most importantly,</span>
             <span class="fragment"><c>Fast</c> and <c>Cheap</c></span>
           </section>
         </section>
 
-
         <section>
           <section>
-            <j>What is <r>Prompt</r></j><br>
-            <p class="fragment">Question <f>(what you want to <cc>know</cc>)</f></p>
-            <p class="fragment">Instruction <f>(what you want to <cc>do</cc>)</f></p>
-            <p class="fragment">Example <f>(what you want to <cc>learn</cc>)</f></p>
+            <j>What is <r>Prompt</r></j
+            ><br />
+            <p class="fragment">
+              Question <f>(what you want to <cc>know</cc>)</f>
+            </p>
+            <p class="fragment">
+              Instruction <f>(what you want to <cc>do</cc>)</f>
+            </p>
+            <p class="fragment">
+              Example <f>(what you want to <cc>learn</cc>)</f>
+            </p>
           </section>
           <section>
             <j>What is <r>Prompt Engineering</r></j>
-            <p class="fragment">The <c>methodologies</c> and <c>techniques</c></f></p>
-            <p class="fragment">to build and organize prompts</f></p>
+            <p class="fragment">
+              The <c>methodologies</c> and <c>techniques</c>
+            </p>
+            <p class="fragment">to build and organize prompts</p>
           </section>
         </section>
 
         <section>
-          <j>Tutorials</j><br>
-          <p><a class="fragment" href="https://learnprompting.org/docs/intro">Learn Prompting<f>Contains everything you should learn</f></a></p>
-          <p><a class="fragment" href="https://www.promptingguide.ai">Prompt Engineering Guide<f>For researchers and practitioners. By DAIR.AI.</f></a></p>
-          <p><a class="fragment" href="https://github.com/openai/openai-cookbook">OpenAI Cookbook<f>Example codes for common tasks with OpenAI API</f></a></p>
-          <p><a class="fragment" href="https://platform.openai.com/docs/guides/gpt-best-practices">GPT best practices<f>Strategies and tactics for better results from GPTs. By OpenAI</f></a></p>
-          <p><a class="fragment" href="https://flowgpt.com/">FlowGPT<f>Find & Use The Best Prompts</f></a></p>
-          <p><a class="fragment" href="https://hansimov.github.io/GPT-Sharing/prompts-cheat-sheet.html">Prompts Cheat Sheet<f>Group prompts by principles</f></a></p>
+          <j>Tutorials</j><br />
+          <p>
+            <a class="fragment" href="https://learnprompting.org/docs/intro"
+              >Learn Prompting<f>Contains everything you should learn</f></a
+            >
+          </p>
+          <p>
+            <a class="fragment" href="https://www.promptingguide.ai"
+              >Prompt Engineering Guide<f
+                >For researchers and practitioners. By DAIR.AI.</f
+              ></a
+            >
+          </p>
+          <p>
+            <a class="fragment" href="https://github.com/openai/openai-cookbook"
+              >OpenAI Cookbook<f
+                >Example codes for common tasks with OpenAI API</f
+              ></a
+            >
+          </p>
+          <p>
+            <a
+              class="fragment"
+              href="https://platform.openai.com/docs/guides/gpt-best-practices"
+              >GPT best practices<f
+                >Strategies and tactics for better results from GPTs. By
+                OpenAI</f
+              ></a
+            >
+          </p>
+          <p>
+            <a class="fragment" href="https://flowgpt.com/"
+              >FlowGPT<f>Find & Use The Best Prompts</f></a
+            >
+          </p>
+          <p>
+            <a
+              class="fragment"
+              href="https://hansimov.github.io/GPT-Sharing/prompts-cheat-sheet.html"
+              >Prompts Cheat Sheet<f>Group prompts by principles</f></a
+            >
+          </p>
         </section>
 
         <section>
@@ -246,12 +315,14 @@
           <p class="fragment">Less Ambiguous</p>
           <p class="fragment">Keep Iterating</p>
         </section>
-        
+
         <section>
           <section>
             <jc>More Informative</jc>
             <p class="fragment"><c>Detailed ...</c></p>
-            <p class="fragment">Roles, Scenarios, Contexts, Instructions, Questions</p>
+            <p class="fragment">
+              Roles, Scenarios, Contexts, Instructions, Questions
+            </p>
             <p class="fragment"><c>Additional ...</c></p>
             <p class="fragment">Examples, Shots, Choices, Options, Paths</p>
           </section>
@@ -266,9 +337,19 @@
           </section>
           <section>
             <jc>Keep Iterating</jc>
-            <p class="fragment"><a href="https://arxiv.org/abs/2201.11903"><c>Chain/Tree of Thoughts</c></a></p>
+            <p class="fragment">
+              <a href="https://arxiv.org/abs/2201.11903"
+                ><c>Chain/Tree of Thoughts</c></a
+              >
+            </p>
             <p class="fragment">Break to Subtasks / Steps</p>
-            <p class="fragment"><a style="text-decoration: none; color: white;" href="https://arxiv.org/abs/2210.03629">Search before Reason, Plan before Action</a></p>
+            <p class="fragment">
+              <a
+                style="text-decoration: none; color: white"
+                href="https://arxiv.org/abs/2210.03629"
+                >Search before Reason, Plan before Action</a
+              >
+            </p>
             <p class="fragment">Create Multiple Paths</p>
             <p class="fragment">Combine to Summary / Best Solution</p>
             <p class="fragment"><c>Automation</c></p>
@@ -276,18 +357,23 @@
             <p class="fragment">Self Check/Criticize</p>
           </section>
         </section>
-        
+
         <section>
           <j>Let's make our hands dirty</j>
-          <p class="fragment">Mission: <a href="https://github.com/Hansimov/gpt-tools/blob/main/abstract-paper.py"><c>Build an arXiv paper abstract extractor</c></a></p>
+          <p class="fragment">
+            Mission:
+            <a
+              href="https://github.com/Hansimov/gpt-tools/blob/main/abstract-paper.py"
+              ><c>Build an arXiv paper abstract extractor</c></a
+            >
+          </p>
           <!-- <img class="r-stretch" style="mix-blend-mode: difference;" src="./images/may-the-force-be-with-you.jpg"> -->
         </section>
-        
+
         <section>
           <j>May the Prompt be with you</j>
           <!-- <img class="r-stretch" style="mix-blend-mode: difference;" src="./images/may-the-force-be-with-you.jpg"> -->
         </section>
-        
       </div>
     </div>
 
